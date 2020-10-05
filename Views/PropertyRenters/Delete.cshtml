@@ -1,0 +1,66 @@
+﻿@model Caviris_MIS4200.Models.PropertyRenter
+
+@{
+    ViewBag.Title = "Delete Property Renter";
+}
+
+<h2>Delete Property Renters</h2>
+
+<div class="alert-warning">
+    <strong>Warning!</strong><h3>Are you sure you want to delete this?</h3>
+</div>
+<div>
+    <h4>Delete Property Renter</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.property.streetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.property.streetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.renter.fullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.renter.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateTimeRented)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateTimeRented)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monthlyRent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monthlyRent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateTimeEnded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateTimeEnded)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-warning" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

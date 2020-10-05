@@ -24,6 +24,14 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Leasing Company<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li>@Html.ActionLink("Properties", "Index", "Property")</li>
+                    <li>@Html.ActionLink("Owner", "Index", "Owners")</li>
+                    <li>@Html.ActionLink("Property Renter", "Index", "PropertyRenters")</li>
+                    <li>@Html.ActionLink("Renter", "Index", "Renters")</li>
+                        </ul>
+                    </li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

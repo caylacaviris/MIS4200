@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Caviris_MIS4200.Models.PropertyRenter>
+
+@{
+    ViewBag.Title = "Property Renters Index";
+}
+
+<h2>Property Renters Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.property.streetAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.renter.fullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateTimeRented)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.monthlyRent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateTimeEnded)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.property.streetAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.renter.fullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateTimeRented)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.monthlyRent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateTimeEnded)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.propertyRenterID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.propertyRenterID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.propertyRenterID })
+        </td>
+    </tr>
+}
+
+</table>

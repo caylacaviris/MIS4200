@@ -1,0 +1,58 @@
+﻿@model Caviris_MIS4200.Models.PropertyRenter
+
+@{
+    ViewBag.Title = "Property Renter Details";
+}
+
+<h2>Property Renter Details</h2>
+
+<div>
+    <h4>Property Renter Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.property.streetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.property.streetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.renter.fullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.renter.fullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateTimeRented)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateTimeRented)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.monthlyRent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.monthlyRent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateTimeEnded)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateTimeEnded)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.propertyRenterID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,58 @@
+﻿@model Caviris_MIS4200.Models.Property
+
+@{
+    ViewBag.Title = "Property Details";
+}
+
+<h2>Property Details</h2>
+
+<div>
+    <h4>Property Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.owner.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.owner.firstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.streetAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.streetAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.city)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.city)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.state)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.state)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.zipcode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.zipcode)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.propertyID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
