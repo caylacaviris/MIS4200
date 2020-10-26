@@ -13,7 +13,7 @@ namespace Team_1_Project.Models
         public Guid ID { get; set; }
 
         [Required]
-        [Display (Name = "Last Name")]
+        [Display (Name = "lastName")]
         public string lastName { get; set; }
 
         [Required]
